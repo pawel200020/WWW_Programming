@@ -1,0 +1,16 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<p id="MyP"></p>
+<script>
+var myVar = 5;
+var interval = setInterval(function() {
+myVar++;
+document.getElementById("MyP").innerHTML = myVar;
+if(myVar >=11)
+    clearInterval(interval);
+}, 1000);
+</script>
+</body>
