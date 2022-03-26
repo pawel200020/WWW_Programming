@@ -1,0 +1,124 @@
+.replaced {
+    visibility: hidden;
+}
+
+.replaced:after {
+    border-radius: 50%;
+    behavior: url(PIE.htc);
+    width: 100px;
+    height: 100px;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "100% Process finished!";
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: example;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50;
+    border: 3px solid green;
+    position: fixed;
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes example {
+    0% {
+        background-color: red;
+        width: 100px;
+        content: "links";
+    }
+    50% {
+        background-color: yellow;
+        width: 200px;
+        content: "links";
+    }
+    100% {
+        background-color: yellow;
+        width: 200px;
+        content: "links";
+    }
+}
+
+
+/* Standard syntax */
+
+@keyframes example {
+    0% {
+        background-color: #C20A0A;
+        left: 0px;
+        width: 1px;
+        height: 1px;
+        content: "0%";
+    }
+    10% {
+        background-color: #FF0000;
+        left: 100px;
+        width: 100px;
+        height: 100px;
+        content: "10%";
+    }
+    20% {
+        background-color: #FF7C00;
+        left: 200px;
+        width: 200px;
+        height: 200px;
+        content: "20%";
+    }
+    30% {
+        background-color: #FFC900;
+        left: 300px;
+        width: 100px;
+        height: 100px;
+        content: "33%";
+    }
+    40% {
+        background-color: #ECFF00;
+        left: 400px;
+        width: 200px;
+        height: 200px;
+        content: "45%";
+    }
+    50% {
+        background-color: #AEFF00;
+        left: 500px;
+        width: 100px;
+        height: 100px;
+        content: "58%";
+    }
+    60% {
+        background-color: #00FF97;
+        left: 600px;
+        width: 50px;
+        height: 50px;
+        content: "68%";
+    }
+    70% {
+        background-color: #00C1FF;
+        left: 700px;
+        width: 50px;
+        height: 100px;
+        content: "79%";
+    }
+    80% {
+        background-color: #00FF13;
+        left: 1000px;
+        width: 400px;
+        height: 400px;
+        content: "90%";
+    }
+    visibility: visible;
+    position: absolute;
+    top: 0;
+}
