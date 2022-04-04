@@ -1,0 +1,26 @@
+#playground {
+    background: green;
+    width: 900px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+#ball {
+    background: #fbb;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 150px;
+    top: 100px;
+    border-radius: 15px;
+}
+
+.paddle {
+    background: #bbf;
+    left: 250px;
+    top: 440px;
+    position: absolute;
+    width: 125px;
+    height: 20px;
+}
