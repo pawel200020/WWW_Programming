@@ -20,16 +20,19 @@ $(function() {
         $("#endgame").attr('disabled', false);
         play = true;
         var name = $("#nick").val();
-        $("#hi").html("hello nice to meet you " + name);
+        $("#hi").html("Hello " + name + ", let's play a game ");
+        $("#hi").css('visibility', 'visible');
         playGame();
+
 
     });
     $("#endgame").click(function() {
         play = false;
         $(this).attr('disabled', true);
         $("#startgame").attr('disabled', false);
+        $("#paddle").css({ top: 440, left: 250, position: 'absolute' });
+        $("#hi").css('visibility', 'hidden');
         setPoints();
-
         refreshLeadboard();
         resetBall();
 
@@ -44,16 +47,15 @@ function playGame() {
     isGamePlayed = true;
 
     $(document).keydown(function(e) {
-        if (e.which === 37) {
+        if (e.which === 37 && play) {
             var top = parseInt($("#paddle").css("left"));
             $("#paddle").css("left", top - movement);
         }
-        if (e.which === 39) {
+        if (e.which === 39 && play) {
             var top = parseInt($("#paddle").css("left"));
             $("#paddle").css("left", top + movement);
         }
     });
-    console.log(map);
 }
 
 function moveball() {
@@ -89,13 +91,18 @@ function moveball() {
             refreshLeadboard();
             points = 0;
             $("#points").html(points);
-            ball.x = parseInt($("#playground").css("width")) / 2;
-            ball.y = parseInt($("#playground").css("height")) / 2;
+            ball.x = 100;
+            ball.y = 100;
             $("#ball").css({
                 "left": ball.x,
                 "top": ball.y
             });
             ball.directionX = 1;
+            play = false;
+            $("#endgame").attr('disabled', true);
+            $("#startgame").attr('disabled', false);
+            $("#paddle").css({ top: 440, left: 350, position: 'absolute' });
+            $("#hi").css('visibility', 'hidden');
         }
 
         ball.x += ball.speed * ball.directionX;

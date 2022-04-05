@@ -3,31 +3,46 @@
 
 <head>
     <meta charset="utf-8">
-    <title>HTML5 + CSS3 + jQuery Ping vs Pong Game</title>
+    <title>Squash Game</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <header>
-        <h1>Ping vs Pong</h1>
-        <h2>The Game</h2>
-    </header>
-
+    <div id="myTitle">
+        <h1>The Squash Game</h1>
+    </div>
+    <br>
     <div id="game">
         <div id="scoreboard">
-            <div class="score">Points <span id="points">0</span></div>
+            <div class="score">Score : <span id="points">0</span></div>
         </div>
+        <br>
+        <div id="hi"></div>
+        <br>
         <div id="playground">
             <div id="paddle" class="paddle"></div>
             <div id="ball"></div>
         </div>
     </div>
     <br>
-    <button id="startgame">Start Game!</button>
-    <button id="endgame">End Game</button><br>
-    <input type="text" id="nick"><br>
-    <p id="hi"></p>
+    <div class="form__group">
+        <input type="text" class="form__input" id="nick" placeholder="Your nick" required="" />
+        <br>
+        <a class="button1" id="startgame">Start Game!</a>
+        <a class="button1" id="endgame">End Game</a>
+        <br>
+    </div>
+
+
+
     <div id="leadboard"></div>
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/pingpong.js"></script>
