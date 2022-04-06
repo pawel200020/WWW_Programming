@@ -1,9 +1,10 @@
 <br />
 
-    <span id="intel"> intel </span>,
+    <!-- <span id="intel"> intel </span>,
     <span id="amd"> amd </span>,
     <span id="nvidia"> nvidia </span>
-    <br />
+    <br /> -->
+    
     <div class="cpu">cpu's
         <div class="content cpu_types">
             <div class="intel">core i5 7500</div>
