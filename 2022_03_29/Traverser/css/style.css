@@ -17,6 +17,7 @@ body {
     border-radius: 25px;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
 .motherboards {
@@ -27,6 +28,7 @@ body {
     border-radius: 25px;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
 .gpu {
@@ -37,6 +39,7 @@ body {
     border-radius: 25px;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
 .cpu_types,
