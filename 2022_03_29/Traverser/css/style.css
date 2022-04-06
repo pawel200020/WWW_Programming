@@ -1,12 +1,46 @@
-#panel,
-#flip {
-    padding: 5px;
-    text-align: center;
-    background-color: #e5eecc;
-    border: solid 1px #c3c3c3;
+.content {
+    background: rgb(223, 223, 223);
 }
 
-#panel {
-    padding: 50px;
+body {
+    font-size: 50px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+}
+
+.fruit {
+    background-color: #269ed5;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vegetable {
+    background-color: #8dd96a;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dairy {
+    background-color: #dd7e43;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fruit_types,
+.vegetable_types,
+.dairy_types {
     display: none;
 }

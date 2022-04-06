@@ -1,2 +1,28 @@
-<div id="flip">Click to slide down panel</div>
-<div id="panel">Hello world!</div>
+<br />
+
+    <span id="breakfast"> breakfast </span>,
+    <span id="lunch"> lunch </span>,
+    <span id="dinner"> dinner </span>
+    <br />
+    <div class="fruit">fruit
+        <div class="content fruit_types">
+            <div class="breakfast">apple</div>
+            <div class="lunch">bannana</div>
+            <div class="dinner">orange</div>
+            <div class="breakfast">mango</div>
+        </div>
+    </div>
+    <div class="vegetable">vegetable
+        <div class="content vegetable_types">
+            <div class="breakfast">lettuce</div>
+            <div class="lunch">celery</div>
+            <div class="dinner">cucumber</div>
+        </div>
+    </div>
+    <div class="dairy">dairy
+        <div class="content dairy_types">
+            <div class="breakfast">milk</div>
+            <div class="lunch">cheese</div>
+            <div class="dinner">butter</div>
+        </div>
+    </div>
