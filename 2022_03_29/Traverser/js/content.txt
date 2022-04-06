@@ -1,28 +1,28 @@
 <br />
 
-    <span id="breakfast"> breakfast </span>,
-    <span id="lunch"> lunch </span>,
-    <span id="dinner"> dinner </span>
+    <span id="intel"> intel </span>,
+    <span id="amd"> amd </span>,
+    <span id="nvidia"> nvidia </span>
     <br />
-    <div class="fruit">fruit
-        <div class="content fruit_types">
-            <div class="breakfast">apple</div>
-            <div class="lunch">bannana</div>
-            <div class="dinner">orange</div>
-            <div class="breakfast">mango</div>
+    <div class="cpu">cpu's
+        <div class="content cpu_types">
+            <div class="intel">core i5 7500</div>
+            <div class="intel">core i3 8100</div>
+            <div class="amd">radeon r7 3700X </div>
+            <div class="nvidia">tegra 1</div>
         </div>
     </div>
-    <div class="vegetable">vegetable
-        <div class="content vegetable_types">
-            <div class="breakfast">lettuce</div>
-            <div class="lunch">celery</div>
-            <div class="dinner">cucumber</div>
+    <div class="content motherboards">motherboards
+        <div class="content motherboard_types">
+            <div class="intel">H110-M</div>
+            <div class="nvidia">tesla</div>
+            <div class="amd">X570</div>
         </div>
     </div>
-    <div class="dairy">dairy
-        <div class="content dairy_types">
-            <div class="breakfast">milk</div>
-            <div class="lunch">cheese</div>
-            <div class="dinner">butter</div>
+    <div class="gpu">gpu's
+        <div class="content gpu_types">
+            <div class="intel">iris graphics 630</div>
+            <div class="nvidia">RTX 3090 Ti</div>
+            <div class="amd">RX 6600</div>
         </div>
     </div>

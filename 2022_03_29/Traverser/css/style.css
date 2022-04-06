@@ -9,7 +9,7 @@ body {
     background-size: 400% 400%;
 }
 
-.fruit {
+.cpu {
     background-color: #269ed5;
     position: relative;
     overflow: hidden;
@@ -19,7 +19,7 @@ body {
     margin-right: auto;
 }
 
-.vegetable {
+.motherboards {
     background-color: #8dd96a;
     position: relative;
     overflow: hidden;
@@ -29,7 +29,7 @@ body {
     margin-right: auto;
 }
 
-.dairy {
+.gpu {
     background-color: #dd7e43;
     position: relative;
     overflow: hidden;
@@ -39,8 +39,8 @@ body {
     margin-right: auto;
 }
 
-.fruit_types,
-.vegetable_types,
-.dairy_types {
+.cpu_types,
+.motherboard_types,
+.gpu_types {
     display: none;
 }
