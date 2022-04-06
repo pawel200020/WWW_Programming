@@ -5,18 +5,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $("button").click(function() {
-                $("#div1").load("demo.php");
+            $("#flip").click(function() {
+                $("#panel").slideDown("slow");
             });
         });
     </script>
+    <style>
+        #panel,
+        #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+        
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="div1">
-        <h2>Let jQuery AJAX Change This Text</h2>
+    <div id="wrapper">
+        <div id="flip">Click to slide down panel</div>
+        <div id="panel">Hello world!</div>
     </div>
-    <button>Get External Content</button>
 </body>
 
 </html>
