@@ -4,32 +4,89 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $("#flip").click(function() {
-                $("#panel").slideDown("slow");
+        $(function() {
+            $('.content').hide();
+            var $elms = $('.fruit, .vegetable, .dairy');
+            $elms.click(function() {
+                var $content = $(this).children('.content');
+                $content.stop(1, 1).slideToggle(600);
+            });
+            var items = ['breakfast', 'lunch', 'dinner'];
+            $(items).each(function() {
+                var sel = this;
+                $('#' + sel).hover(function() {
+                    $('.' + sel).parent().slideDown(400);
+                    //$('.' + sel).siblings(':not(.' + sel + ')').hide();
+                }, function() {
+                    $('.' + sel).parent().slideUp(400);
+                    //$('.' + sel).siblings(':not(.' + sel + ')').show();
+                });
+
             });
         });
     </script>
     <style>
-        #panel,
-        #flip {
-            padding: 5px;
-            text-align: center;
-            background-color: #e5eecc;
-            border: solid 1px #c3c3c3;
+        .invisible {
+            display: none;
         }
         
-        #panel {
-            padding: 50px;
-            display: none;
+        .content {
+            background: white;
+        }
+        
+        .fruit {
+            background-color: #269ed5;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            border-radius: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 20px;
+        }
+        
+        .vegetable {
+            background: green;
+        }
+        
+        .dairy {
+            background: yellow;
+        }
+        
+        .black {
+            background: black;
+            color: white;
         }
     </style>
 </head>
 
 <body>
-    <div id="wrapper">
-        <div id="flip">Click to slide down panel</div>
-        <div id="panel">Hello world!</div>
+    <br />
+    <span id="breakfast"> breakfast </span>,
+    <span id="lunch"> lunch </span>,
+    <span id="dinner"> dinner </span>
+    <br />
+    <div class="fruit">fruit
+        <div class="content fruit_types">
+            <div class="breakfast">apple</div>
+            <div class="lunch">bannana</div>
+            <div class="dinner">orange</div>
+            <div class="breakfast">mango</div>
+        </div>
+    </div>
+    <div class="vegetable">vegetable
+        <div class="content vegetable_types">
+            <div class="breakfast">lettuce</div>
+            <div class="lunch">celery</div>
+            <div class="dinner">cucumber</div>
+        </div>
+    </div>
+    <div class="dairy">dairy
+        <div class="content dairy_types">
+            <div class="breakfast">milk</div>
+            <div class="lunch">cheese</div>
+            <div class="dinner">butter</div>
+        </div>
     </div>
 </body>
 
