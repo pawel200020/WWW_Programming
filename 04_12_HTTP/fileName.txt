@@ -1,1 +1,11 @@
-null
+nick=asdf&data=fsdsa
+nick=addsdf&data=fsdddddsa
+nick=ania&data=kaja
+nick=fff&data=fff
+nick=jj&data=jjj
+nick=ddf&data=fff
+nick=mama&data=fffffffffda
+nick=dupa&data=stop+cenzurze
+nick=dd&data=fda+asdf
+nick=filozof&data=lorem+ipsum
+nick=maja&data=Alternatively,+we+can+first+get+all+keys+in+our+Map+using+the+keySet+method+and+then+iterate+through+the+map+by+each+key:
