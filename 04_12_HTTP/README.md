@@ -5,5 +5,7 @@ Simple Java application which hosts blog webpage. Page saves data to txt file. P
 ![preview](preview.png?raw=true)
 ## Launching
 type in terminal:
+
 java test.java
+
 javac java
