@@ -1,11 +1,3 @@
-nick=asdf&data=fsdsa
-nick=addsdf&data=fsdddddsa
-nick=ania&data=kaja
-nick=fff&data=fff
-nick=jj&data=jjj
-nick=ddf&data=fff
-nick=mama&data=fffffffffda
-nick=dupa&data=stop+cenzurze
-nick=dd&data=fda+asdf
-nick=filozof&data=lorem+ipsum
-nick=maja&data=Alternatively,+we+can+first+get+all+keys+in+our+Map+using+the+keySet+method+and+then+iterate+through+the+map+by+each+key:
+nick=Russia+today&data=As+news+of+the+Moskva's+fate+unfolds,+Russia+insists+that+its+Black+Sea+flagship+wasn't+damaged+by+a+Ukrainian+missile+-+but+instead+by+ammunition+that+exploded+in+an+onboard+fire.&date=17:21+14.4.2022
+nick=olympics+games&data=Speaking+out+is+very+risky+and+can+have+serious+consequences.+Thousands+have+been+detained+at+anti-war+protests.+A+new+criminal+law+bans+describing+what+the+Russian+government+calls+its+"special+military+operation"+in+Ukraine+as+an+invasion+or+war.+Throughout+our+interview+Lesun+carefully+avoids+using+those+words.&date=17:22+14.4.2022
+nick=Hello+Ukraine&data=Ukrainian+President+Volodymyr+Zelensky+has+accused+European+countries+that+continue+to+buy+Russian+oil+of+"earning+their+money+in+other+people's+blood".+In+an+interview+with+the+BBC,+President+Zelensky+singled+out+Germany+and+Hungary,+accusing+them+of+blocking+efforts+to+embargo+energy+sales,+from+which+Russia+stands+to+make+up+to+�250bn+($326bn)+this+year.&date=21:24+14.4.2022

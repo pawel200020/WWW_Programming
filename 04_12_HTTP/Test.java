@@ -36,23 +36,38 @@ public class Test {
     return result;
   }
 
+  public static StringBuilder plusToSpace(String variable, int NumSpaces){
+    StringBuilder a = new StringBuilder();
+    for (var ta : variable.toCharArray()) {
+      if (ta == '+') {
+        for(int i = 0; i < NumSpaces; i++){
+          a.append(" ");
+        }
+      } else {
+        a.append(ta);
+      }
+    }
+    return a;
+  }
   public static void addPostsFromFile(List<String> textfile, StringBuilder response) {
     for (var item : textfile) {
       var query = queryToMap(item);
       for (Map.Entry<String, String> entry : query.entrySet()) {
-        if (!entry.getKey().equals("data")) {
-          response.append(entry.getKey() + " : " + entry.getValue() + "<br>");
-        } else {
+        if (entry.getKey().equals("nick")) {
           var t = entry.getValue();
-          StringBuilder a = new StringBuilder();
-          for (var ta : t.toCharArray()) {
-            if (ta == '+') {
-              a.append(" ");
-            } else {
-              a.append(ta);
-            }
-          }
-          response.append(a + "<br>");
+          StringBuilder a = plusToSpace(t, 1);
+          response.append("<div id=\"ans\">" + "\n" + "<p id =\"nickString\">" + entry.getKey()
+              + "</p>: <h3 id =\"nick2\"> " + a + "</h3><hr>");
+        } else if (entry.getKey().equals("data")) {
+          response.append("<p>");
+          var t = entry.getValue();
+          StringBuilder a = plusToSpace(t, 1);
+          response.append(a + "</p></div>" + "<br>");
+        } else if (entry.getKey().equals("date")) {
+          response.append("<p>");
+          var t = entry.getValue();
+          StringBuilder a = plusToSpace(t, 5);
+          response.append(a + "</p>");
         }
       }
     }
@@ -78,17 +93,29 @@ public class Test {
   static class MyHandler implements HttpHandler {
     @Override
     public void handle(HttpExchange t) {
-
-      StringBuilder response = new StringBuilder(
-          "<html>" +
-              "<b>" +
-              "<b>some code" +
-              "<form action=\"\" method=\"get\">" +
-              "<input type=\"text\" id=\"nick\" name=\"nick\"><br><br>" +
-              "<textarea type=\"text\" id=\"data\" name=\"data\" style=\"width: 400px; height: 100px;\"></textarea><br><br>"
-              +
-              "<input type=\"submit\" value=\"Submit\">" +
-              "</form>" + "<br>" + "<br>" + "<br>" + "<br>" + "<br>");
+      var date = LocalDateTime.now();
+      var minute = new StringBuilder();
+      if(date.getMinute()<10){
+        minute.append("0"+date.getMinute());
+      } else{
+        minute.append(date.getMinute());
+      }
+      var currTime = date.getHour()+":"+minute+"+"+date.getDayOfMonth()+"."+date.getMonthValue()+"."+date.getYear();
+      StringBuilder response = new StringBuilder();
+      try {
+        File file2 = new File("index.html");
+        if (!file2.exists()) {
+          file2.createNewFile();
+        }
+        BufferedReader r1 = new BufferedReader(new FileReader("index.html"));
+        String rz;
+        while ((rz = r1.readLine()) != null) {
+          response.append(rz);
+        }
+        r1.close();
+      } catch (Exception ex) {
+        ex.printStackTrace();
+      }
 
       try {
         File file = new File("fileName.txt");
@@ -98,8 +125,9 @@ public class Test {
         BufferedWriter writer = new BufferedWriter(new FileWriter("fileName.txt", true));
         BufferedReader reader = new BufferedReader(new FileReader("fileName.txt"));
         String a = new String();
-        if (!(t.getRequestURI().getQuery() == null)) {
+        if ((!(t.getRequestURI().getQuery() == null))&&!(t.getRequestURI().getQuery().contains("nick=&data="))&&!(t.getRequestURI().getQuery().isEmpty())) {
           a = t.getRequestURI().getQuery();
+          a += "&date=" + currTime;
           if (!a.isEmpty()) {
             writer.write(a);
             writer.write("\n");
@@ -125,6 +153,7 @@ public class Test {
         os.close();
         writer.close();
         reader.close();
+
       } catch (Exception ex) {
         System.out.println("unhandled exception");
         ex.getStackTrace();
