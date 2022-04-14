@@ -6,6 +6,6 @@ Simple Java application which hosts blog webpage. Page saves data to txt file. P
 ## Launching
 type in terminal:
 
-java test.java
-
-javac java
+<li>java test.java
+<li>javac java
+<li>Then go to page http://localhost:8080/test
