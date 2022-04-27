@@ -31,6 +31,14 @@
     }
     class Game
     {
+        protected function _compareCarts($cart1, $cart2)
+        {
+            if ((($cart1->color == $cart2->color) && ($cart1->figure == $cart2->figure)) && ($cart1->symbol == $cart2->symbol)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
         var $players;
         function __construct($players = null)
         {
@@ -59,19 +67,45 @@
                 1 - red
                 UWAGA KARTY NIE MOGĄ SIĘ POWTARZAĆ!!!!
             */
-            $cartArray = (new Cart(rand(0, 1),rand(0, 3),rand(1,14)));
+            $cartArray = array();
+            array_push($cartArray, new Cart(rand(0, 1), rand(0, 3), rand(1, 14)));
             //$player = new Player(new Cart(rand(0, 1),rand(0, 3),rand(1,14)),);
             //$playerArray = ($player);
             //losujemy 2 karty dla każdego gracza
-            for ($i = 1; $i <= ($playerNumber*$playerCarts)+$commonCarts; $i++) {
-                echo $i;
+            //($playerNumber * $playerCarts) + $commonCarts
+            for ($i = 2; $i <= ($playerNumber * $playerCarts) + $commonCarts; $i++) {
+                $cart = new Cart(rand(0, 1), rand(0, 3), rand(1, 14));
+                $wasOnList = false;
+                while (true) {
+                    foreach ($cartArray as $value) {
+                        if ($this->_compareCarts($value, $cart)) {
+                            $wasOnList = true;
+                            echo 'was:'.$wasOnList;
+                            break;
+                        }
+                    }   
+                    if ($wasOnList) {
+                        $cart = new Cart(rand(0, 1), rand(0, 3), rand(1, 14));
+                    } else {
+                        break;
+                    }
+                    break;
+                }
+                array_push($cartArray, $cart);
             }
+            echo '<ul>';
+            foreach ($cartArray as $item) {
+                echo '<li>' . $item->color . ' ' . $item->figure .' '. $item->symbol . '</a></li>';
+            }
+            echo '</ul>';
             //losujemy 3 wspolne karty
             //sprawdzamy kto wygra
 
 
         }
     }
+    $game = new Game();
+    $game->play();
     $mynumber = rand(5, 15);
     ?>
     <div>
