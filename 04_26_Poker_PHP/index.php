@@ -18,31 +18,40 @@
             $this->figure = $figure;
             $this->symbol = $symbol;
         }
-    }
-    class Player
-    {
-        var $cart1;
-        var $cart2;
-        function __construct($cart1 = null, $cart2 = null)
+        function print()
         {
-            $this->cart1 = $cart1;
-            $this->cart2 = $cart2;
+            echo '<li>' . $this->color . ' ' . $this->figure . ' ' . $this->symbol . '</a></li>';
         }
-    }
-    class Game
-    {
-        protected function _compareCarts($cart1, $cart2)
-        {
-            if ((($cart1->color == $cart2->color) && ($cart1->figure == $cart2->figure)) && ($cart1->symbol == $cart2->symbol)) {
+        function compare ($cart1){
+            if ((($cart1->color == $this->color) && ($cart1->figure == $this->figure)) && ($cart1->symbol == $this->symbol)) {
                 return true;
             } else {
                 return false;
             }
         }
-        var $players;
-        function __construct($players = null)
+    }
+    class Player
+    {
+        var $cartArray = array();
+        function __construct($cartArray = null)
         {
-            $this->players = $players;
+            $this->cartArray = $cartArray;
+        }
+        function print()
+        {
+            echo 'player' . '<br>';
+            echo '<ul>';
+            foreach ($this->cartArray as $item)
+                $item->print();
+            echo '</ul>';
+        }
+    }
+    class Game
+    {
+        
+        function __construct()
+        {
+            ;
         }
         function play()
         {
@@ -73,17 +82,17 @@
             //$playerArray = ($player);
             //losujemy 2 karty dla każdego gracza
             //($playerNumber * $playerCarts) + $commonCarts
-            for ($i = 2; $i <= ($playerNumber * $playerCarts) + $commonCarts; $i++) {
+            for ($i = 2; $i <= ($playerNumber * 2) + $commonCarts; $i++) {
                 $cart = new Cart(rand(0, 1), rand(0, 3), rand(1, 14));
                 $wasOnList = false;
                 while (true) {
                     foreach ($cartArray as $value) {
-                        if ($this->_compareCarts($value, $cart)) {
+                        if ($value->compare($cart)) {
                             $wasOnList = true;
-                            echo 'was:'.$wasOnList;
+                            echo 'was:' . $wasOnList;
                             break;
                         }
-                    }   
+                    }
                     if ($wasOnList) {
                         $cart = new Cart(rand(0, 1), rand(0, 3), rand(1, 14));
                     } else {
@@ -95,9 +104,34 @@
             }
             echo '<ul>';
             foreach ($cartArray as $item) {
-                echo '<li>' . $item->color . ' ' . $item->figure .' '. $item->symbol . '</a></li>';
+                $item->print();
             }
             echo '</ul>';
+            $playerArray = array();
+            $commonCartArray = array();
+            for ($i = 0; $i < $playerNumber*$playerCarts; $i += $playerCarts) {
+                $arrayTopush = array();
+                for($j=0; $j<$playerCarts; $j++){
+                    array_push($arrayTopush,$cartArray[$i+$j]);
+                }
+                array_push($playerArray, new Player($arrayTopush));
+
+            }
+            for ($i = $playerCarts * $playerNumber; $i < $commonCarts + $playerCarts * $playerNumber; $i++) {
+                array_push($commonCartArray, ($cartArray[$i]));
+            }
+            echo '<br>';
+            echo 'common cards <br>';
+            echo '<ul>';
+            foreach ($commonCartArray as $item) {
+                $item->print();
+            }
+            echo '</ul>';
+            $i = 0;
+            foreach ($playerArray as $item) {
+                $item->print();
+            }
+
             //losujemy 3 wspolne karty
             //sprawdzamy kto wygra
 
