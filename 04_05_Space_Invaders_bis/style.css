@@ -1,3 +1,15 @@
 canvas {
     background-color: black;
 }
+
+p {
+    position: fixed;
+    z-index: 10;
+    color: white;
+    left: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: black;
+}
