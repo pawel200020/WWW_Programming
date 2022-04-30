@@ -1,0 +1,46 @@
+#rcorners1 {
+    border-radius: 25px;
+    background: #79a5df;
+    padding: 20px;
+    width: 200px;
+    height: 75px;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+li {
+    margin-left: 30px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: antiquewhite;
+}
+
+#rcorners2 {
+    border-radius: 25px;
+    background: #c9b30e;
+    padding: 20px;
+    width: 200px;
+    height: 120px;
+    margin-bottom: 25px;
+}
+
+#rcorners3 {
+    border-radius: 25px;
+    background: #6bc357;
+    padding: 20px;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 25px;
+}
+
+#winner {
+    font-size: 15px;
+}
