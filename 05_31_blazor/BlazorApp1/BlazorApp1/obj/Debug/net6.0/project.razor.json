@@ -16421,4 +16421,289 @@
             "Name": "@bind-Value",
             "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.String>",
             "Documentation": "Binds the provided expression to the 'Value' property and a change event delegate to the 'ValueChanged' property of the component.",
-            "Metadat
+            "Metadata": {
+              "Common.DirectiveAttribute": "True",
+              "Common.PropertyName": "Value"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Components.IsSpecialKind": "Components.Bind",
+          "Components.Bind.ValueAttribute": "Value",
+          "Components.Bind.ChangeAttribute": "ValueChanged",
+          "Components.Bind.ExpressionAttribute": "ValueExpression",
+          "Common.TypeName": "Microsoft.AspNetCore.Components.Forms.InputText"
+        }
+      },
+      {
+        "HashCode": 2094479654,
+        "Kind": "Components.Bind",
+        "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
+        "AssemblyName": "Microsoft.AspNetCore.Components.Web",
+        "Documentation": "Binds the provided expression to the 'Value' property and a change event delegate to the 'ValueChanged' property of the component.",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Microsoft.AspNetCore.Components.Forms.InputText",
+            "Attributes": [
+              {
+                "Name": "@bind-Value",
+                "Metadata": {
+                  "Common.DirectiveAttribute": "True"
+                }
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Bind",
+            "Name": "@bind-Value",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.String>",
+            "Documentation": "Binds the provided expression to the 'Value' property and a change event delegate to the 'ValueChanged' property of the component.",
+            "Metadata": {
+              "Common.DirectiveAttribute": "True",
+              "Common.PropertyName": "Value"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Components.IsSpecialKind": "Components.Bind",
+          "Components.Bind.ValueAttribute": "Value",
+          "Components.Bind.ChangeAttribute": "ValueChanged",
+          "Components.Bind.ExpressionAttribute": "ValueExpression",
+          "Common.TypeName": "Microsoft.AspNetCore.Components.Forms.InputText",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1888050503,
+        "Kind": "Components.Bind",
+        "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
+        "AssemblyName": "Microsoft.AspNetCore.Components.Web",
+        "Documentation": "Binds the provided expression to the 'Value' property and a change event delegate to the 'ValueChanged' property of the component.",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "InputTextArea",
+            "Attributes": [
+              {
+                "Name": "@bind-Value",
+                "Metadata": {
+                  "Common.DirectiveAttribute": "True"
+                }
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Bind",
+            "Name": "@bind-Value",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.String>",
+            "Documentation": "Binds the provided expression to the 'Value' property and a change event delegate to the 'ValueChanged' property of the component.",
+            "Metadata": {
+              "Common.DirectiveAttribute": "True",
+              "Common.PropertyName": "Value"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Components.IsSpecialKind": "Components.Bind",
+          "Components.Bind.ValueAttribute": "Value",
+          "Components.Bind.ChangeAttribute": "ValueChanged",
+          "Components.Bind.ExpressionAttribute": "ValueExpression",
+          "Common.TypeName": "Microsoft.AspNetCore.Components.Forms.InputTextArea"
+        }
+      },
+      {
+        "HashCode": 378574301,
+        "Kind": "Components.Bind",
+        "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
+        "AssemblyName": "Microsoft.AspNetCore.Components.Web",
+        "Documentation": "Binds the provided expression to the 'Value' property and a change event delegate to the 'ValueChanged' property of the component.",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
+            "Attributes": [
+              {
+                "Name": "@bind-Value",
+                "Metadata": {
+                  "Common.DirectiveAttribute": "True"
+                }
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Bind",
+            "Name": "@bind-Value",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.String>",
+            "Documentation": "Binds the provided expression to the 'Value' property and a change event delegate to the 'ValueChanged' property of the component.",
+            "Metadata": {
+              "Common.DirectiveAttribute": "True",
+              "Common.PropertyName": "Value"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Components.IsSpecialKind": "Components.Bind",
+          "Components.Bind.ValueAttribute": "Value",
+          "Components.Bind.ChangeAttribute": "ValueChanged",
+          "Components.Bind.ExpressionAttribute": "ValueExpression",
+          "Common.TypeName": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1220915786,
+        "Kind": "Components.Ref",
+        "Name": "Ref",
+        "AssemblyName": "Microsoft.AspNetCore.Components",
+        "Documentation": "Populates the specified field or property with a reference to the element or component.",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "*",
+            "Attributes": [
+              {
+                "Name": "@ref",
+                "Metadata": {
+                  "Common.DirectiveAttribute": "True"
+                }
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Ref",
+            "Name": "@ref",
+            "TypeName": "System.Object",
+            "Documentation": "Populates the specified field or property with a reference to the element or component.",
+            "Metadata": {
+              "Common.PropertyName": "Ref",
+              "Common.DirectiveAttribute": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Components.IsSpecialKind": "Components.Ref",
+          "Common.ClassifyAttributesOnly": "True",
+          "Common.TypeName": "Microsoft.AspNetCore.Components.Ref"
+        }
+      },
+      {
+        "HashCode": 1763183964,
+        "Kind": "Components.Key",
+        "Name": "Key",
+        "AssemblyName": "Microsoft.AspNetCore.Components",
+        "Documentation": "Ensures that the component or element will be preserved across renders if (and only if) the supplied key value matches.",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "*",
+            "Attributes": [
+              {
+                "Name": "@key",
+                "Metadata": {
+                  "Common.DirectiveAttribute": "True"
+                }
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Key",
+            "Name": "@key",
+            "TypeName": "System.Object",
+            "Documentation": "Ensures that the component or element will be preserved across renders if (and only if) the supplied key value matches.",
+            "Metadata": {
+              "Common.PropertyName": "Key",
+              "Common.DirectiveAttribute": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Components.IsSpecialKind": "Components.Key",
+          "Common.ClassifyAttributesOnly": "True",
+          "Common.TypeName": "Microsoft.AspNetCore.Components.Key"
+        }
+      }
+    ],
+    "CSharpLanguageVersion": 1000
+  },
+  "RootNamespace": "BlazorApp1",
+  "Documents": [
+    {
+      "FilePath": "d:\\Code\\UJ\\WWW_Programming\\05_31_blazor\\BlazorApp1\\BlazorApp1\\Pages\\MyPages.razor",
+      "TargetPath": "Pages\\MyPages.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\Code\\UJ\\WWW_Programming\\05_31_blazor\\BlazorApp1\\BlazorApp1\\Pages\\_Layout.cshtml",
+      "TargetPath": "Pages\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Code\\UJ\\WWW_Programming\\05_31_blazor\\BlazorApp1\\BlazorApp1\\Pages\\Index.razor",
+      "TargetPath": "Pages\\Index.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\Code\\UJ\\WWW_Programming\\05_31_blazor\\BlazorApp1\\BlazorApp1\\Pages\\_Host.cshtml",
+      "TargetPath": "Pages\\_Host.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Code\\UJ\\WWW_Programming\\05_31_blazor\\BlazorApp1\\BlazorApp1\\App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\Code\\UJ\\WWW_Programming\\05_31_blazor\\BlazorApp1\\BlazorApp1\\Shared\\SurveyPrompt.razor",
+      "TargetPath": "Shared\\SurveyPrompt.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\Code\\UJ\\WWW_Programming\\05_31_blazor\\BlazorApp1\\BlazorApp1\\Pages\\Error.cshtml",
+      "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Code\\UJ\\WWW_Programming\\05_31_blazor\\BlazorApp1\\BlazorApp1\\Shared\\MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\Code\\UJ\\WWW_Programming\\05_31_blazor\\BlazorApp1\\BlazorApp1\\Pages\\Counter.razor",
+      "TargetPath": "Pages\\Counter.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\Code\\UJ\\WWW_Programming\\05_31_blazor\\BlazorApp1\\BlazorApp1\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "d:\\Code\\UJ\\WWW_Programming\\05_31_blazor\\BlazorApp1\\BlazorApp1\\Shared\\NavMenu.razor",
+      "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\Code\\UJ\\WWW_Programming\\05_31_blazor\\BlazorApp1\\BlazorApp1\\Pages\\FetchData.razor",
+      "TargetPath": "Pages\\FetchData.razor",
+      "FileKind": "component"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}
