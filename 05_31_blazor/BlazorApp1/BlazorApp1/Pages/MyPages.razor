@@ -1,0 +1,88 @@
+﻿@page "/MyPages"
+<style>
+    .column {
+        float: left;
+        width: 50%;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+<PageTitle>My Pages</PageTitle>
+<p>remember to add https:// if you put link form The Global Internet</p>
+<div class="row">
+    <div class="column">
+        <input type="text" @bind="@CurrentValue" @oninput="@((e) => { CurrentValue=(string)e.Value;})" />
+        <button @onclick="UpdateHeading">
+            +
+        </button>
+    </div>
+    <div class="column">
+        <h1>
+            @fit()
+        </h1>
+    </div>
+</div>
+
+
+<div class="grid-container">
+    @if (webpages.Count!=0)
+    {
+        @((MarkupString)@renderList())
+    }
+
+</div>
+@code {
+    public string CurrentValue { get; set; } = "";
+    Dictionary<string, string> webpages = new();
+
+    private void UpdateHeading()
+    {
+        if (!webpages.ContainsKey(fit())){
+            webpages.Add(fit(), CurrentValue);
+        }
+        
+
+    }
+    private string renderList()
+    {
+        string result = "";
+        foreach (KeyValuePair<string, string> entry in webpages)
+        {
+            result += "<div class=\"grid-item\">" + "<a href=\"" + entry.Value + "\">" + entry.Key + "</a>" + "</div>";
+        }
+        return result;
+    }
+    public string fit()
+    {
+        string result = CurrentValue;
+        if (CurrentValue.Contains("https"))
+            result = result.Replace("https", "");
+        if (CurrentValue.Contains("http"))
+            result = result.Replace("http", "");
+        if (CurrentValue.Contains("://"))
+            result = result.Replace("://", "");
+        if (CurrentValue.Contains(".pl"))
+            result = result.Replace(".pl", "");
+        if (CurrentValue.Contains(".ru"))
+            result = result.Replace(".ru", "");
+        if (CurrentValue.Contains(".gov"))
+            result = result.Replace(".gov", "");
+        if (CurrentValue.Contains(".com"))
+            result = result.Replace(".com", "");
+        if (CurrentValue.Contains("www."))
+            result = result.Replace("www.", "");
+        if (CurrentValue.Contains(".edu"))
+            result = result.Replace(".edu", "");
+        if (CurrentValue.Contains(".uj"))
+            result = result.Replace(".uj", "");
+        if (CurrentValue.Contains(".agh"))
+            result = result.Replace(".agh", "");
+        return result;
+    }
+
+}
